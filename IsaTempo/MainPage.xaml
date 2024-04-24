@@ -4,9 +4,105 @@
              x:Class="IsaTempo.MainPage"
              Shell.NavBarIsVisible="false">
   
+ <Grid>  
+<Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="80"/>
+   <RowDefinition Height="80"/>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="150"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+   <ColumnDefinition Width="*"/>
+   <ColumnDefinition Width="*"/>
+   <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions> 
+
+        <Image Source= "noitechuva.jpg"
+            Aspect= "AspectFill"
+            Grid.Row="0"
+            Grid.RowSpan="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"/>
+ 
+ <Frame
+  Margin="10,0,0,0"
+  Padding="0"
+  CornerRadius="30"
+  BackgroundColor="#88ffffff"
+  Grid.Row="1"
+  Grid.RowSpan="2"
+  Grid.Column="0">
+
   <Grid>
-   <Image Source="noitechuva.jpg"
-       
-          Aspect="AspectFill"/>
- </Grid>
+   <Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   </Grid.RowDefinitions>
+
+  <Label x:Name="labelTemp"/>
+  <Label x:Name=" labelSky"/>
+  <Label x:Name="labelCidade"/>
+  </Grid>
+  </Frame>
+
+<Frame 
+  Padding="0"
+  CornerRadius="30"
+  BackgroundColor="#88ffffff"
+  Grid.Row="1"
+  Grid.Column="1">
+  <Grid>
+   <Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   </Grid.RowDefinitions>
+
+  <Label x:Name="labelChuva"/>
+  <Label x:Name="labelHumidade"/>
+  </Grid>
+  </Frame>
+
+<Frame 
+  Padding="0"
+  CornerRadius="30"
+  BackgroundColor="#88ffffff"
+  Grid.Row="2"
+  Grid.Column="1">
+ <Label x:Name="labelAmanhecer"/>
+ </Frame>
+
+  <Frame
+  Margin="0,0,10,0"
+  Padding="0"
+  CornerRadius="30"
+  BackgroundColor="#88ffffff"
+  Grid.Row="1"
+  Grid.RowSpan="1"
+  Grid.Column="2">
+ <Label x:Name="labelChuva"/>
+ </Frame>  
+
+<Frame 
+ Margin="10,0,10,10"
+  Padding="0"
+  CornerRadius="30"
+  BackgroundColor="#88ffffff"
+  Grid.Row="4"
+  Grid.Column="0"
+  Grid.ColumnSpan="3">
+ <Label x:Name="labelHumidade"/>
+ </Frame>
+
+<Frame 
+Margin="0,0,10,0"
+  Padding="0"
+  CornerRadius="30"
+  BackgroundColor="#88ffffff"
+  Grid.Row="2"
+  Grid.Column="2">
+ </Frame>
+ </Grid> 
 </ContentPage>

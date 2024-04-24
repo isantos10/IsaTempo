@@ -1,6 +1,6 @@
 namespace IsaTempo;
    
-   public class results
+   public class Results
    {
     public int temp { get; set;}
     public string description { get; set;}
