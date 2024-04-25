@@ -53,9 +53,9 @@
   BackgroundColor="#88ffffff"
   Grid.Row="1"
   Grid.Column="1">
+
   <Grid>
    <Grid.RowDefinitions>
-   <RowDefinition Height="*"/>
    <RowDefinition Height="*"/>
    <RowDefinition Height="*"/>
    </Grid.RowDefinitions>
@@ -63,7 +63,7 @@
   <Label x:Name="labelChuva"/>
   <Label x:Name="labelHumidade"/>
   </Grid>
-  </Frame>
+</Frame>
 
 <Frame 
   Padding="0"
@@ -71,8 +71,16 @@
   BackgroundColor="#88ffffff"
   Grid.Row="2"
   Grid.Column="1">
+   <Grid>
+   <Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   </Grid.RowDefinitions>
  <Label x:Name="labelAmanhecer"/>
- </Frame>
+ <Label x:Name="labelAnoitecer"/>
+ </Grid>
+</Frame>
 
   <Frame
   Margin="0,0,10,0"
@@ -82,7 +90,15 @@
   Grid.Row="1"
   Grid.RowSpan="1"
   Grid.Column="2">
- <Label x:Name="labelChuva"/>
+   <Grid>
+   <Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   </Grid.RowDefinitions>
+ <Label x:Name="labelForcawind"/>
+ <Label x:Name="labelDirecawind"/>
+ </Grid>
  </Frame>  
 
 <Frame 
@@ -93,8 +109,14 @@
   Grid.Row="4"
   Grid.Column="0"
   Grid.ColumnSpan="3">
- <Label x:Name="labelHumidade"/>
- </Frame>
+   <Grid>
+   <Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   </Grid.RowDefinitions>
+   <Label x:Name="labelMoonFase"/>
+   </Grid>
+</Frame>
 
 <Frame 
 Margin="0,0,10,0"
@@ -103,6 +125,13 @@ Margin="0,0,10,0"
   BackgroundColor="#88ffffff"
   Grid.Row="2"
   Grid.Column="2">
+   <Grid>
+   <Grid.RowDefinitions>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>
+   </Grid.RowDefinitions>
+   </Grid>
  </Frame>
  </Grid> 
 </ContentPage>
