@@ -5,7 +5,8 @@ namespace IsaTempo;
 
 public partial class MainPage : ContentPage
 {
-	const string Url ="https://api.hgbrasil.com/weather?"
+	const string Url ="https://api.hgbrasil.com/weather?woeid=455927&key=5f1b4e9e";
+ 	Resposta resposta;
 
 	public MainPage()
 	{
@@ -15,16 +16,16 @@ public partial class MainPage : ContentPage
      
  void PreencherTela()
   {
-	labelTemp.Text= Resultados.temp.ToString();
-    labelSky.Text= Resultados.description;
-    labelCidade.Text= Resultados.city;
-    labelChuva.Text= Resultados.rain.ToString();
-    labelHumidade.Text= Resultados.humidity.ToString();
-	labelAmanhecer.Text= Resultados.sunrise;
-	labelAnoitecer.Text= Resultados.sunset;
-	labelForcawind.Text= Resultados.wind_speedy.ToString();
-	labelDirecawind.Text= Resultados.wind_direction;
-	labelMoonFase.Text= Resultados.moon_phase;
+	labelTemp.Text= resposta.results.temp.ToString();
+    labelSky.Text= resposta.results.description;
+    labelCidade.Text= resposta.results.city;
+    labelChuva.Text= resposta.results.rain.ToString();
+    labelHumidade.Text= resposta.results.humidity.ToString();
+	labelAmanhecer.Text= resposta.results.sunrise;
+	labelAnoitecer.Text= resposta.results.sunset;
+	labelForcawind.Text= resposta.results.wind_speedy.ToString();
+	labelDirecawind.Text= resposta.results.wind_direction;
+	labelMoonFase.Text= resposta.results.moon_phase;
   }
   async void AtualizaTempo()
   {
@@ -35,7 +36,7 @@ public partial class MainPage : ContentPage
 		if (response.IsSuccessStatusCode)
 		{
 			var content = await response.Content.ReadAsStringAsync();
-			Resposta = JsonSerializer.Deserialize<Resposta>(content);
+			resposta = JsonSerializer.Deserialize<Resposta>(content);
  		}
 		PreencherTela();
 	}
