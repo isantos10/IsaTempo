@@ -18,7 +18,7 @@
    <ColumnDefinition Width="*"/>
 </Grid.ColumnDefinitions> 
 
-        <Image Source= "noitechuva.jpg"
+     <Image x:Name="imagemfundo"
             Aspect= "AspectFill"
             Grid.Row="0"
             Grid.RowSpan="5"
@@ -41,9 +41,18 @@
    <RowDefinition Height="*"/>
    </Grid.RowDefinitions>
 
-  <Label x:Name="labelTemp"/>
+   <Label x:Name="labelTemp"
+              TextColor="#2f2f36"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
+
+
   <Label x:Name=" labelSky"/>
-  <Label x:Name="labelCidade"/>
+
+  <Label x:Name="labelCidade"
+          Grid.Row="0"
+          Grid.Column="0"/>
   </Grid>
   </Frame>
 
@@ -60,8 +69,33 @@
    <RowDefinition Height="*"/>
    </Grid.RowDefinitions>
 
-  <Label x:Name="labelChuva"/>
-  <Label x:Name="labelHumidade"/>
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*"/>
+    <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+  <Label x:Name="labelChuva"
+         TextColor="#2f2f36"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
+
+  <Label x:Name="labelHumidade"
+          TextColor="#2f2f36"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
+
+   <Label Text="Chuva"
+          FontSize="12"
+          Grid.Row="0"
+          Grid.Column="0"/>
+
+   <Label Text="Humidade"
+          FontSize="12"
+          Grid.Row="1"
+          Grid.Column="0"/>
+
   </Grid>
 </Frame>
 
@@ -71,14 +105,38 @@
   BackgroundColor="#88ffffff"
   Grid.Row="2"
   Grid.Column="1">
-   <Grid>
-   <Grid.RowDefinitions>
-   <RowDefinition Height="*"/>
-   <RowDefinition Height="*"/>
-   <RowDefinition Height="*"/>
-   </Grid.RowDefinitions>
- <Label x:Name="labelAmanhecer"/>
- <Label x:Name="labelAnoitecer"/>
+ <Grid>
+  <Grid.RowDefinitions>
+  <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>   
+  </Grid.RowDefinitions>
+
+  <Grid.ColumnDefinitions>
+  <ColumnDefinition Width="*"/>
+  <ColumnDefinition Width="*"/>
+  </Grid.ColumnDefinitions>
+
+    <Label Text="Amanhecer"
+           FontSize="12"
+           Grid.Row="0"
+           Grid.Column="0"/>
+
+    <Label Text="Anoitecer"
+           FontSize="12"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+ <Label x:Name="labelAmanhecer"
+         TextColor="#2f2f36"
+         FontSize="20"
+         Grid.Row="0"
+         HorizontalOptions="Center"/>
+ <Label x:Name="labelAnoitecer"
+         TextColor="#2f2f36"
+         FontSize="20"
+         Grid.Row="0"
+         HorizontalOptions="Center"/>
+
  </Grid>
 </Frame>
 
@@ -90,14 +148,37 @@
   Grid.Row="1"
   Grid.RowSpan="1"
   Grid.Column="2">
-   <Grid>
+  <Grid>
    <Grid.RowDefinitions>
    <RowDefinition Height="*"/>
-   <RowDefinition Height="*"/>
-   <RowDefinition Height="*"/>
+   <RowDefinition Height="*"/>   
    </Grid.RowDefinitions>
- <Label x:Name="labelForcawind"/>
- <Label x:Name="labelDirecawind"/>
+
+
+  <Grid.ColumnDefinitions>
+   <ColumnDefinition Width="*"/>
+   <ColumnDefinition Width="*"/>
+   </Grid.ColumnDefinitions>
+
+<Label Text="Força do Vento"
+       
+             Grid.Row="0"
+             Grid.Column="0"/>
+
+<Label Text="Direção do Vento"
+             Grid.Row="1"
+             Grid.Column="0"/>
+           
+ <Label x:Name="labelForcawind"
+         TextColor="#2f2f36"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
+ <Label x:Name="labelDirecawind"
+         TextColor="#2f2f36"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
  </Grid>
  </Frame>  
 
@@ -110,13 +191,27 @@
   Grid.Column="0"
   Grid.ColumnSpan="3">
    <Grid>
-   <Grid.RowDefinitions>
-   <RowDefinition Height="*"/>
-   <RowDefinition Height="*"/>
-   </Grid.RowDefinitions>
-   <Label x:Name="labelMoonFase"/>
-   </Grid>
-</Frame>
+    <Grid.RowDefinitions>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>   
+    </Grid.RowDefinitions>
+
+  <Grid.ColumnDefinitions>
+   <ColumnDefinition Width="*"/>
+   <ColumnDefinition Width="*"/>
+   </Grid.ColumnDefinitions>
+
+  <Label Text="Fase da Lua"
+         Grid.Row="0"
+         Grid.Column="0"/>
+
+  <Label x:Name="labelMoonFase"
+          TextColor="#2f2f36"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
+  </Grid>
+  </Frame>
 
 <Frame 
 Margin="0,0,10,0"
